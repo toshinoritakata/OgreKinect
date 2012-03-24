@@ -2,3 +2,4 @@ MicrosoftのKinectSDKをOgre3dで使う時のリスナーのサンプル
 RGBの画像の右上にデプス画像を表示するだけ
 
 OpenCVとかAssimpなどを利用するコードも入っているが使用されていない
+
