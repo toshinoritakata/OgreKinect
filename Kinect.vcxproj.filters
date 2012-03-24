@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\InputManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AssetLoader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\kinectApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\KinectFrameListener.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\app.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\InputManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AssetLoader.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\KinectFrameListener.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{c1a16212-a875-457c-b54d-314944633d64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{3bdcb692-5213-46c3-b5f6-d61106517665}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

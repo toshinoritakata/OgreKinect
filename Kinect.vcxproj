@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E105C1EB-E33C-4D65-B44B-8BA27CC9BFB1}</ProjectGuid>
+    <RootNamespace>HikariDemo</RootNamespace>
+    <ProjectName>KinectMS</ProjectName>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)objects\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)objects\$(Configuration)\</IntDir>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MSRKINECTSDK)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(MSRKINECTSDK)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSRKINECTSDK)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSRKINECTSDK)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include;$(ProjectDir)include;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\include;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\include\OGRE;E:\SDKs\boost\boost_1_42_0;E:\SDKs\OpenCV\OpenCV-2.2.0\build\include;E:\SDKs\OpenCV\OpenCV-2.2.0\3rdparty\include;E:\SDKs\OpenCV\OpenCV-2.2.0\build\include\opencv;E:\SDKs\ARToolKit\include;E:\SDKs\assimp--2.0.863-sdk\include;C:\Program Files\Microsoft SDKs\Kinect\v1.0\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;opencv_core220d.lib;opencv_video220d.lib;opencv_ts220d.lib;opencv_highgui220d.lib;opencv_imgproc220d.lib;assimp.lib;winmm.lib;Kinect10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\SDKs\ARToolKit\lib;E:\SDKs\OpenCV\OpenCV-2.2.0\3rdparty\lib;E:\SDKs\OpenCV\OpenCV-2.2.0\build\lib\Debug;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\lib\debug;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\lib\debug\opt;E:\SDKs\boost\boost_1_42_0\stage\lib;E:\SDKs\assimp--2.0.863-sdk\lib\assimp_debug-dll_win32;C:\Program Files\Microsoft SDKs\Kinect\v1.0\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>atlthunk.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;$(ProjectDir)include;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\include;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\include\OGRE;E:\SDKs\boost\boost_1_42_0;E:\SDKs\OpenCV\OpenCV-2.2.0\build\include;E:\SDKs\OpenCV\OpenCV-2.2.0\3rdparty\include;E:\SDKs\OpenCV\OpenCV-2.2.0\build\include\opencv;E:\SDKs\ARToolKit\include;E:\SDKs\assimp--2.0.863-sdk\include;C:\Program Files\Microsoft SDKs\Kinect\v1.0\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain.lib;OIS.lib;opencv_core220.lib;opencv_video220.lib;opencv_ts220.lib;opencv_highgui220.lib;opencv_imgproc220.lib;videoInput.lib;libAR.lib;libARgsub.lib;libARMulti.lib;assimp.lib;winmm.lib;Kinect10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\SDKs\ARToolKit\lib;E:\SDKs\OpenCV\OpenCV-2.2.0\3rdparty\lib;E:\SDKs\OpenCV\OpenCV-2.2.0\build\lib\Release;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\lib\release;E:\SDKs\Ogre\OgreSDK_vc10_v1-7-2\lib\release\opt;E:\SDKs\boost\boost_1_42_0\stage\lib;E:\SDKs\assimp--2.0.863-sdk\lib\assimp_release-dll_win32;C:\Program Files\Microsoft SDKs\Kinect\v1.0\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>atlthunk.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\kinectApp.cpp" />
+    <ClCompile Include="source\AssetLoader.cpp" />
+    <ClCompile Include="source\InputManager.cpp" />
+    <ClCompile Include="source\KinectFrameListener.cpp" />
+    <ClCompile Include="source\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\KinectFrameListener.h" />
+    <ClInclude Include="include\app.h" />
+    <ClInclude Include="include\AssetLoader.h" />
+    <ClInclude Include="include\InputManager.h" />
+    <ClInclude Include="include\utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
